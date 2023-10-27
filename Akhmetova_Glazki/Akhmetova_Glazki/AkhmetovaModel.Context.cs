@@ -19,12 +19,11 @@ namespace Akhmetova_Glazki
         public static Akhmetova_glazkiEntities GetContext()
         {
             if (_context == null)
-            {
                 _context = new Akhmetova_glazkiEntities();
-            }
-            return _context;
-        }
 
+            return _context;
+                
+        }
         public Akhmetova_glazkiEntities()
             : base("name=Akhmetova_glazkiEntities")
         {
