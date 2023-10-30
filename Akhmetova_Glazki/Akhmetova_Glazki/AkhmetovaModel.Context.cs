@@ -20,9 +20,7 @@ namespace Akhmetova_Glazki
         {
             if (_context == null)
                 _context = new Akhmetova_glazkiEntities();
-
             return _context;
-                
         }
         public Akhmetova_glazkiEntities()
             : base("name=Akhmetova_glazkiEntities")

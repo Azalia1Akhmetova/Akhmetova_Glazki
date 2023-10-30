@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-D:\3 курс\ИСП-3121\Ахметова\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\
+D:\3 курс\ИСП-3121\Ахметова\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Release\
 Akhmetova_Glazki
 none
 false
-DEBUG;TRACE
+TRACE
 D:\3 курс\ИСП-3121\Ахметова\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\App.xaml
 3547723036
 2-456458258
@@ -16,5 +16,5 @@ D:\3 курс\ИСП-3121\Ахметова\Akhmetova_Glazki\Akhmetova_Glazki\Akh
 19-434772294
 AddEditPage.xaml;AgentPage.xaml;MainWindow.xaml;
 
-False
+True
 

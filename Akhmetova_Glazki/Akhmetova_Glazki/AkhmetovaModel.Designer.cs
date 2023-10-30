@@ -1,4 +1,4 @@
-﻿// Создание кода T4 для модели "E:\Важные файлы\РПМ\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\AkhmetovaModel.edmx" включено. 
+﻿// Создание кода T4 для модели "D:\3 курс\ИСП-3121\Ахметова\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\AkhmetovaModel.edmx" включено. 
 // Чтобы включить формирование кода прежних версий, измените значение свойства "Стратегия создания кода" конструктора
 // на "Legacy ObjectContext". Это свойство доступно в окне "Свойства", если модель
 // открыта в конструкторе.

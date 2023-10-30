@@ -31,5 +31,15 @@ namespace Akhmetova_Glazki
         {
             Manager.MainFrame.Navigate(new AddEditPage());
         }
+
+        private void TBoxSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void SortCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

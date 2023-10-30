@@ -9,16 +9,34 @@
       Title="AgentPage">
 
     <Grid>
-        <ListView Name="AgentListView" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <TextBox Name="TBoxSearch" TextChanged="TBoxSearch_TextChanged"
+                         Width="300" FontSize="15" Margin="5"></TextBox>
+            <ComboBox Name="SortCombo" SelectionChanged="SortCombo_SelectionChanged" Height="20" Width="150">
+                <TextBlock Text="наим по возрастанию"></TextBlock>
+                <TextBlock Text="наим по убыванию"></TextBlock>
+                <TextBlock Text="скидка по возрастанию"></TextBlock>
+                <TextBlock Text="скидка по убыванию"></TextBlock>
+                <TextBlock Text="приоритет по возрастанию"></TextBlock>
+                <TextBlock Text="приоритет по убыванию"></TextBlock>
+            </ComboBox>
+        </StackPanel>
+        
+        <ListView Name="AgentListView" Grid.Row="1">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="40"/>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
@@ -34,8 +52,11 @@
                                 </Binding>
                             </Image.Source>
                         </Image>
-                        <TextBlock Text="{Binding Title}" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" FontSize="20" TextWrapping="Wrap"></TextBlock>
-                        <TextBlock Text="{Binding ProductCount}" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" FontSize="16"></TextBlock>
+                        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="0">
+                            <TextBlock Text="{Binding AgentTypeString}" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" FontSize="20" TextWrapping="Wrap"></TextBlock>
+                            <TextBlock Text=" | " HorizontalAlignment="Left" FontSize="20" TextWrapping="Wrap"></TextBlock>
+                            <TextBlock Text="{Binding Title}" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" FontSize="20" TextWrapping="Wrap"></TextBlock>
+                        </StackPanel>
                         <TextBlock Text="{Binding Phone}" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" FontSize="16"></TextBlock>
                         <TextBlock Text="{Binding Priority, StringFormat={}Приоритетность: {0:0}}" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" FontSize="16"></TextBlock>
                     </Grid>
