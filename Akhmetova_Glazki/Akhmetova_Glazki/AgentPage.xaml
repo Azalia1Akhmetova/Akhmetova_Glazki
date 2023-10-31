@@ -14,15 +14,27 @@
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <TextBlock Text="Введите для поиска" TextAlignment="Right" Width="180" FontSize="20" Margin="5"></TextBlock>
             <TextBox Name="TBoxSearch" TextChanged="TBoxSearch_TextChanged"
-                         Width="300" FontSize="15" Margin="5"></TextBox>
-            <ComboBox Name="SortCombo" SelectionChanged="SortCombo_SelectionChanged" Height="20" Width="150">
+                         Width="290" FontSize="15" Margin="5"></TextBox>
+            
+            <ComboBox Name="SortCombo" SelectionChanged="SortCombo_SelectionChanged" Width="150" FontSize="15" Margin="5">
                 <TextBlock Text="наим по возрастанию"></TextBlock>
                 <TextBlock Text="наим по убыванию"></TextBlock>
                 <TextBlock Text="скидка по возрастанию"></TextBlock>
                 <TextBlock Text="скидка по убыванию"></TextBlock>
                 <TextBlock Text="приоритет по возрастанию"></TextBlock>
                 <TextBlock Text="приоритет по убыванию"></TextBlock>
+            </ComboBox>
+
+            <ComboBox Name="FilterCombo" SelectionChanged="FilterCombo_SelectionChanged" Width="120" FontSize="15" Margin="5">
+                <TextBlock Text="все"></TextBlock>
+                <TextBlock Text="МФО"></TextBlock>
+                <TextBlock Text="ЗАО"></TextBlock>
+                <TextBlock Text="МКК"></TextBlock>
+                <TextBlock Text="ООО"></TextBlock>
+                <TextBlock Text="ОАО"></TextBlock>
+                <TextBlock Text="ПАО"></TextBlock>
             </ComboBox>
         </StackPanel>
         
