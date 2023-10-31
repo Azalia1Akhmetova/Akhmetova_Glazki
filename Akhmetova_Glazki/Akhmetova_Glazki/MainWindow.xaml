@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Akhmetova_Glazki"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" FontFamily="Century Gothic" Icon="Resources/Глазки-save.ico">
+        Title="Akhmetova_Glazki" Height="450" Width="800" FontFamily="Century Gothic" Icon="Resources/Глазки-save.ico">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="75"/>

@@ -53,3 +53,31 @@ E:\Важные файлы\РПМ\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Gl
 E:\Важные файлы\РПМ\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\Akhmetova_Glazki.csproj.CopyComplete
 E:\Важные файлы\РПМ\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\Akhmetova_Glazki.exe
 E:\Важные файлы\РПМ\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\Akhmetova_Glazki.pdb
+E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\bin\Debug\Akhmetova_Glazki.exe.config
+E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\bin\Debug\Akhmetova_Glazki.exe
+E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\bin\Debug\Akhmetova_Glazki.pdb
+E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\bin\Debug\EntityFramework.dll
+E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\bin\Debug\EntityFramework.SqlServer.dll
+E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\bin\Debug\EntityFramework.xml
+E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\bin\Debug\EntityFramework.SqlServer.xml
+E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\bin\Debug\ru\EntityFramework.resources.dll
+E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\Akhmetova_Glazki.csproj.AssemblyReference.cache
+E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\Akhmetova_Glazki.csproj.SuggestedBindingRedirects.cache
+E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\AddEditPage.g.cs
+E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\AgentPage.g.cs
+E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\MainWindow.g.cs
+E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\App.g.cs
+E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\Akhmetova_Glazki_Content.g.cs
+E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\Akhmetova_Glazki_MarkupCompile.cache
+E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\Akhmetova_Glazki_MarkupCompile.lref
+E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\App.baml
+E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\AddEditPage.baml
+E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\AgentPage.baml
+E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\MainWindow.baml
+E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\Akhmetova_Glazki.g.resources
+E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\Akhmetova_Glazki.Properties.Resources.resources
+E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\Akhmetova_Glazki.csproj.GenerateResource.cache
+E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\Akhmetova_Glazki.csproj.CoreCompileInputs.cache
+E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\Akhmetova_Glazki.csproj.CopyComplete
+E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\Akhmetova_Glazki.exe
+E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\Akhmetova_Glazki.pdb

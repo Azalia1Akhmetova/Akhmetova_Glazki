@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Akhmetova_Glazki"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="AgentPage">
+      Title="AgentPage" FontFamily="Century Gothic">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -14,21 +14,21 @@
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Grid.Row="0">
-            <TextBlock Text="Введите для поиска" TextAlignment="Right" Width="180" FontSize="20" Margin="5"></TextBlock>
+            <TextBlock Text="Введите для поиска" TextAlignment="Right" Width="180" FontSize="18" Margin="5"></TextBlock>
             <TextBox Name="TBoxSearch" TextChanged="TBoxSearch_TextChanged"
                          Width="290" FontSize="15" Margin="5"></TextBox>
             
             <ComboBox Name="SortCombo" SelectionChanged="SortCombo_SelectionChanged" Width="150" FontSize="15" Margin="5">
-                <TextBlock Text="наим по возрастанию"></TextBlock>
-                <TextBlock Text="наим по убыванию"></TextBlock>
-                <TextBlock Text="скидка по возрастанию"></TextBlock>
-                <TextBlock Text="скидка по убыванию"></TextBlock>
-                <TextBlock Text="приоритет по возрастанию"></TextBlock>
-                <TextBlock Text="приоритет по убыванию"></TextBlock>
+                <TextBlock Text="Наименование по возрастанию"></TextBlock>
+                <TextBlock Text="Наименование по убыванию"></TextBlock>
+                <TextBlock Text="Скидка по возрастанию"></TextBlock>
+                <TextBlock Text="Скидка по убыванию"></TextBlock>
+                <TextBlock Text="Приоритет по возрастанию"></TextBlock>
+                <TextBlock Text="Приоритет по убыванию"></TextBlock>
             </ComboBox>
 
             <ComboBox Name="FilterCombo" SelectionChanged="FilterCombo_SelectionChanged" Width="120" FontSize="15" Margin="5">
-                <TextBlock Text="все"></TextBlock>
+                <TextBlock Text="Все"></TextBlock>
                 <TextBlock Text="МФО"></TextBlock>
                 <TextBlock Text="ЗАО"></TextBlock>
                 <TextBlock Text="МКК"></TextBlock>
@@ -37,7 +37,7 @@
                 <TextBlock Text="ПАО"></TextBlock>
             </ComboBox>
         </StackPanel>
-        
+
         <ListView Name="AgentListView" Grid.Row="1">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -53,12 +53,12 @@
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
-                        <Image Width="100" Grid.Column="0" Stretch="UniformToFill" HorizontalAlignment="Center">
+                        <Image Width="100" Grid.Column="0" Grid.RowSpan="4" Stretch="UniformToFill" HorizontalAlignment="Center">
                             <Image.Source>
                                 <Binding Path="MainImagePath">
                                     <Binding.TargetNullValue>
                                         <ImageSource>
-                                            Resources\Глазки-save.png
+                                            Res/picture.png
                                         </ImageSource>
                                     </Binding.TargetNullValue>
                                 </Binding>
@@ -69,8 +69,8 @@
                             <TextBlock Text=" | " HorizontalAlignment="Left" FontSize="20" TextWrapping="Wrap"></TextBlock>
                             <TextBlock Text="{Binding Title}" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" FontSize="20" TextWrapping="Wrap"></TextBlock>
                         </StackPanel>
-                        <TextBlock Text="{Binding Phone}" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" FontSize="16"></TextBlock>
-                        <TextBlock Text="{Binding Priority, StringFormat={}Приоритетность: {0:0}}" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" FontSize="16"></TextBlock>
+                        <TextBlock Text="{Binding Phone}" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" FontSize="16"></TextBlock>
+                        <TextBlock Text="{Binding Priority, StringFormat={}Приоритетность: {0:0}}" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" FontSize="16"></TextBlock>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>

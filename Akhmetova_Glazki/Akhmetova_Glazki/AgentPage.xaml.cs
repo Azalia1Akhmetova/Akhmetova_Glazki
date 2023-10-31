@@ -34,9 +34,54 @@ namespace Akhmetova_Glazki
         private void UpdateAgent()
         {
             var currentAgent = Akhmetova_glazkiEntities.GetContext().Agent.ToList();
-
+            //поиск
             currentAgent = currentAgent.Where(p => p.Title.ToLower().Contains(TBoxSearch.Text.ToLower())|| p.Email.ToLower().Contains(TBoxSearch.Text.ToLower())
             || p.Phone.Replace("+7","8").Replace("(","").Replace(")","").Replace(" ","").Replace("-","").Contains(TBoxSearch.Text)).ToList();
+            //сортировка
+            if(SortCombo.SelectedIndex == 0) 
+            {
+                currentAgent = currentAgent.OrderBy(p => p.Title).ToList();
+            }
+
+            if(SortCombo.SelectedIndex == 1)
+            {
+                currentAgent = currentAgent.OrderByDescending(p => p.Title).ToList();
+            }
+
+            if(SortCombo.SelectedIndex == 4)
+            {
+                currentAgent = currentAgent.OrderBy(p => p.Priority).ToList();
+            }
+
+            if(SortCombo.SelectedIndex == 5)
+            {
+                currentAgent = currentAgent.OrderByDescending(p => p.Priority).ToList();
+            }
+
+            //фильтрация
+            switch(FilterCombo.SelectedIndex)
+            {
+                case 0:
+                    break;
+                case 1:
+                    currentAgent = currentAgent.Where(p => p.AgentTypeString.ToString() == "МФО").ToList();
+                    break;
+                case 2:
+                    currentAgent = currentAgent.Where(p => p.AgentTypeString.ToString() == "ЗАО").ToList();
+                    break;
+                case 3:
+                    currentAgent = currentAgent.Where(p => p.AgentTypeString.ToString() == "МКК").ToList();
+                    break;
+                case 4:
+                    currentAgent = currentAgent.Where(p => p.AgentTypeString.ToString() == "ООО").ToList();
+                    break;
+                case 5:
+                    currentAgent = currentAgent.Where(p => p.AgentTypeString.ToString() == "ОАО").ToList();
+                    break;
+                case 6:
+                    currentAgent = currentAgent.Where(p => p.AgentTypeString.ToString() == "ПАО").ToList();
+                    break;
+            }
 
             AgentListView.ItemsSource = currentAgent;
 
@@ -54,10 +99,15 @@ namespace Akhmetova_Glazki
 
         private void SortCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            UpdateAgent();
         }
 
         private void FilterCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            UpdateAgent();
+        }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
         {
 
         }
