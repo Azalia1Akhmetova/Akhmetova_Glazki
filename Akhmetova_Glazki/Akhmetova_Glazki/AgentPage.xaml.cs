@@ -95,10 +95,10 @@ namespace Akhmetova_Glazki
 
         
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Manager.MainFrame.Navigate(new AddEditPage());
-        }
+        //private void Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    Manager.MainFrame.Navigate(new AddEditPage());
+        //}
 
         private void TBoxSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -117,7 +117,7 @@ namespace Akhmetova_Glazki
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Manager.MainFrame.Navigate(new AddEditPage(null));
         }
 
         private void LeftDirButton_Click(object sender, RoutedEventArgs e)
@@ -217,6 +217,20 @@ namespace Akhmetova_Glazki
         private void PageListBox_MouseUp(object sender, MouseButtonEventArgs e)
         {
             ChangePage(0, Convert.ToInt32(PageListBox.SelectedItem.ToString()) - 1);
+        }
+
+        private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            if(Visibility == Visibility.Visible)
+            {
+                Akhmetova_glazkiEntities.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
+                AgentListView.ItemsSource = Akhmetova_glazkiEntities.GetContext().Agent.ToList();
+            }
+        }
+
+        private void EditBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new AddEditPage((sender as Button).DataContext as Agent));
         }
     }
 }

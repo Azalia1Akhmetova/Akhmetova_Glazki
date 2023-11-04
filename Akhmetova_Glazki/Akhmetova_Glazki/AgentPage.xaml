@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Akhmetova_Glazki"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="AgentPage" FontFamily="Century Gothic">
+      Title="AgentPage" FontFamily="Century Gothic" IsVisibleChanged="Page_IsVisibleChanged">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -55,7 +55,10 @@
                 <TextBlock Text="ОАО"></TextBlock>
                 <TextBlock Text="ПАО"></TextBlock>
             </ComboBox>
+            <Button Content="Добавить агента" Name="AddButton" Click="AddButton_Click"
+                    HorizontalAlignment="Right" VerticalAlignment="Bottom"></Button>
         </StackPanel>
+
 
         <ListView Name="AgentListView" Grid.Row="1">
             <ListView.ItemTemplate>
@@ -72,7 +75,7 @@
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
-                        <Image Width="100" Grid.Column="0" Grid.RowSpan="4" Stretch="UniformToFill" HorizontalAlignment="Center">
+                        <Image Width="160" Grid.Column="0" Grid.RowSpan="4" Stretch="UniformToFill" HorizontalAlignment="Center">
                             <Image.Source>
                                 <Binding Path="Logo">
                                     <Binding.TargetNullValue>
@@ -88,8 +91,11 @@
                             <TextBlock Text=" | " HorizontalAlignment="Left" FontSize="20" TextWrapping="Wrap"></TextBlock>
                             <TextBlock Text="{Binding Title}" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" FontSize="20" TextWrapping="Wrap"></TextBlock>
                         </StackPanel>
-                        <TextBlock Text="{Binding Phone}" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" FontSize="16"></TextBlock>
+                        <TextBlock Text="{Binding Phone}" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" FontSize="16" Margin="5"></TextBlock>
                         <TextBlock Text="{Binding Priority, StringFormat={}Приоритетность: {0:0}}" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" FontSize="16"></TextBlock>
+                        <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal">
+                            <Button Name="EditBtn" Content="Редактировать" Margin="2" Click="EditBtn_Click"></Button>
+                        </StackPanel>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
