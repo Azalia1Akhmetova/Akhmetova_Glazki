@@ -43,5 +43,6 @@ namespace Akhmetova_Glazki
         public virtual ICollection<Shop> Shop { get; set; }
 
         public string AgentTypeString { get { return AgentType.Title; } }
+
     }
 }
