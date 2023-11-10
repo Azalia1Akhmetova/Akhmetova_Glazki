@@ -45,16 +45,14 @@
             <Button Content="Изменить" Name="ChangePictureBtn" Click="ChangePictureBtn_Click"></Button>
         </StackPanel>
 
-
         <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
             <TextBlock Text="Тип агента" FontSize="15" Height="20" Width="100" Margin="5"></TextBlock>
-            <ComboBox FontSize="15" Height="25" Width="100" Name="ComboType"
-                      Text="{Binding AgentTypeID}">
-                <TextBlock Text="МФО"/>
+            <ComboBox FontSize="15" Height="25" Width="100" Name="ComboType">
                 <TextBlock Text="ЗАО"/>
                 <TextBlock Text="МКК"/>
-                <TextBlock Text="ООО"/>
+                <TextBlock Text="МФО"/>
                 <TextBlock Text="ОАО"/>
+                <TextBlock Text="ООО"/>
                 <TextBlock Text="ПАО"/>
             </ComboBox>
         </StackPanel>

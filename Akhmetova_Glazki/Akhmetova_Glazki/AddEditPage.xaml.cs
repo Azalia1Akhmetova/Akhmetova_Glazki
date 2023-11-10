@@ -22,11 +22,16 @@ namespace Akhmetova_Glazki
     public partial class AddEditPage : Page
     {
         private Agent currentAgent = new Agent();
+        List<AgentType> AgentTypes = Akhmetova_glazkiEntities.GetContext().AgentType.ToList();
         public AddEditPage(Agent SelectedAgent)
         {
             InitializeComponent();
             if (SelectedAgent != null)
+            {
                 currentAgent = SelectedAgent;
+                this.currentAgent = SelectedAgent;
+                ComboType.SelectedIndex = currentAgent.AgentTypeID - 1;
+            }
             DataContext = currentAgent;
         }
 
@@ -46,11 +51,25 @@ namespace Akhmetova_Glazki
             if (string.IsNullOrEmpty(currentAgent.Title))
                 errors.AppendLine("Укажите наименование агента");
             if (string.IsNullOrEmpty(currentAgent.Address))
-                errors.AppendLine("Укажите адресс агента");
+                errors.AppendLine("Укажите адрес агента");
             if (string.IsNullOrEmpty(currentAgent.DirectorName))
                 errors.AppendLine("Укажите ФИО директора");
             if (ComboType.SelectedItem == null)
                 errors.AppendLine("Укажите тип агента");
+            else
+            {
+                var currentType = (TextBlock)ComboType.SelectedItem;
+                string currentTypeContent = currentType.Text;
+                foreach (AgentType type in AgentTypes)
+                {
+                    if (type.Title.ToString() == currentTypeContent)
+                    {
+                        currentAgent.AgentType = type;
+                        currentAgent.AgentTypeID = type.ID;
+                        break;
+                    }
+                }
+            }
             if (string.IsNullOrWhiteSpace(currentAgent.Priority.ToString()))
                 errors.AppendLine("Укажите приоритет агента");
             if (currentAgent.Priority <= 0)
@@ -68,6 +87,9 @@ namespace Akhmetova_Glazki
             }
             if (string.IsNullOrWhiteSpace(currentAgent.Email))
                 errors.AppendLine("Укажите почту агента");
+
+            
+
             if(errors.Length > 0)
             {
                 MessageBox.Show(errors.ToString());
@@ -103,6 +125,7 @@ namespace Akhmetova_Glazki
                     {
                         Akhmetova_glazkiEntities.GetContext().Agent.Remove(currentAgent);
                         Akhmetova_glazkiEntities.GetContext().SaveChanges();
+                        Manager.MainFrame.GoBack();
                     }
                     catch (Exception ex)
                     {

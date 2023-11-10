@@ -43,22 +43,26 @@ namespace Akhmetova_Glazki
             currentAgent = currentAgent.Where(p => p.Title.ToLower().Contains(TBoxSearch.Text.ToLower())|| p.Email.ToLower().Contains(TBoxSearch.Text.ToLower())
             || p.Phone.Replace("+7","8").Replace("(","").Replace(")","").Replace(" ","").Replace("-","").Contains(TBoxSearch.Text)).ToList();
             //сортировка
-            if(SortCombo.SelectedIndex == 0) 
+            if (SortCombo.SelectedIndex == 0)
+            {
+                currentAgent = currentAgent.ToList();
+            }
+            if (SortCombo.SelectedIndex == 1) 
             {
                 currentAgent = currentAgent.OrderBy(p => p.Title).ToList();
             }
 
-            if(SortCombo.SelectedIndex == 1)
+            if(SortCombo.SelectedIndex == 2)
             {
                 currentAgent = currentAgent.OrderByDescending(p => p.Title).ToList();
             }
 
-            if(SortCombo.SelectedIndex == 4)
+            if(SortCombo.SelectedIndex == 5)
             {
                 currentAgent = currentAgent.OrderBy(p => p.Priority).ToList();
             }
 
-            if(SortCombo.SelectedIndex == 5)
+            if(SortCombo.SelectedIndex == 6)
             {
                 currentAgent = currentAgent.OrderByDescending(p => p.Priority).ToList();
             }

@@ -38,6 +38,7 @@
                          Width="290" FontSize="15" Margin="5"></TextBox>
             
             <ComboBox Name="SortCombo" SelectionChanged="SortCombo_SelectionChanged" Width="150" FontSize="15" Margin="5">
+                <TextBlock Text="Все"></TextBlock>
                 <TextBlock Text="Наименование по возрастанию"></TextBlock>
                 <TextBlock Text="Наименование по убыванию"></TextBlock>
                 <TextBlock Text="Скидка по возрастанию"></TextBlock>
@@ -90,6 +91,7 @@
                             <TextBlock Text="{Binding AgentTypeString}" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" FontSize="20" TextWrapping="Wrap"></TextBlock>
                             <TextBlock Text=" | " HorizontalAlignment="Left" FontSize="20" TextWrapping="Wrap"></TextBlock>
                             <TextBlock Text="{Binding Title}" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" FontSize="20" TextWrapping="Wrap"></TextBlock>
+                            
                         </StackPanel>
                         <TextBlock Text="{Binding Phone}" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" FontSize="16" Margin="5"></TextBlock>
                         <TextBlock Text="{Binding Priority, StringFormat={}Приоритетность: {0:0}}" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" FontSize="16"></TextBlock>
