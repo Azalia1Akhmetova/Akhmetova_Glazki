@@ -236,5 +236,38 @@ namespace Akhmetova_Glazki
         {
             Manager.MainFrame.Navigate(new AddEditPage((sender as Button).DataContext as Agent));
         }
+
+        private void AgentListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (AgentListView.SelectedItems.Count > 1)
+                PriorityChange.Visibility = Visibility.Visible;
+            else
+                PriorityChange.Visibility = Visibility.Hidden;
+        }
+
+        //private void AddBtn_Click(object sender, RoutedEventArgs e)
+        //{
+
+        //}
+
+        private void PriorityChange_Click(object sender, RoutedEventArgs e)
+        {
+            PriorityWindow window = new PriorityWindow();
+            window.ShowDialog();
+            if (string.IsNullOrEmpty(window.TBPriority.Text))
+                return;
+            MessageBox.Show(window.TBPriority.Text);
+            foreach (Agent AgentLV in AgentListView.SelectedItems)
+                AgentLV.Priority = Convert.ToInt32(window.TBPriority.Text);
+            try
+            {
+                Akhmetova_glazkiEntities.GetContext().SaveChanges();
+                MessageBox.Show("информация сохранена");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+        }
     }
 }

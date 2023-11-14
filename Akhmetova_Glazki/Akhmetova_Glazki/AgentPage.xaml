@@ -61,7 +61,7 @@
         </StackPanel>
 
 
-        <ListView Name="AgentListView" Grid.Row="1">
+        <ListView Name="AgentListView" Grid.Row="1" Grid.RowSpan="2" SelectionChanged="AgentListView_SelectionChanged">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -91,7 +91,7 @@
                             <TextBlock Text="{Binding AgentTypeString}" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" FontSize="20" TextWrapping="Wrap"></TextBlock>
                             <TextBlock Text=" | " HorizontalAlignment="Left" FontSize="20" TextWrapping="Wrap"></TextBlock>
                             <TextBlock Text="{Binding Title}" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" FontSize="20" TextWrapping="Wrap"></TextBlock>
-                            
+
                         </StackPanel>
                         <TextBlock Text="{Binding Phone}" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" FontSize="16" Margin="5"></TextBlock>
                         <TextBlock Text="{Binding Priority, StringFormat={}Приоритетность: {0:0}}" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" FontSize="16"></TextBlock>
@@ -102,5 +102,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Button Content="Изменить приоритет" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" Width="220" Name="PriorityChange"
+                Click="PriorityChange_Click" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="Hidden"></Button>
     </Grid>
 </Page>

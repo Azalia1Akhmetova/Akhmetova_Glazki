@@ -81,3 +81,5 @@ E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\Akhmetova_Glazki
 E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\Akhmetova_Glazki.csproj.CopyComplete
 E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\Akhmetova_Glazki.exe
 E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\Akhmetova_Glazki.pdb
+D:\3 курс\ИСП-3121\Ахметова\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\PriorityWindow.g.cs
+D:\3 курс\ИСП-3121\Ахметова\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\PriorityWindow.baml
