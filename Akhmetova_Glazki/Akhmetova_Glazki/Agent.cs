@@ -11,7 +11,8 @@ namespace Akhmetova_Glazki
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Windows.Media;
+
     public partial class Agent
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -44,5 +45,48 @@ namespace Akhmetova_Glazki
 
         public string AgentTypeString { get { return AgentType.Title; } }
 
+        public int Sales
+        {
+            get
+            {
+                int Total = 0;
+                foreach(ProductSale productSale in this.ProductSale)
+                {
+                    Total += productSale.ProductCount + Convert.ToInt32(productSale.Product.MinCostForAgent);
+                }
+                return Total;
+            }
+        }
+        public int SalePercent
+        {
+            get
+            {
+                int total = 0;
+                foreach(ProductSale productSale in this.ProductSale)
+                {
+                    total += productSale.ProductCount * 10000;
+                }
+                int sale = 0;
+                if (total > 10000 && total < 50000)
+                    sale = 5;
+                if (total >= 50000 && total < 150000)
+                    sale = 10;
+                if (total >= 150000 && total < 500000)
+                    sale = 20;
+                if (total >= 500000)
+                    sale = 25;
+                return sale;
+            } 
+        }
+        public SolidColorBrush FontStyle
+        {
+            get 
+            {
+                if (SalePercent >= 25)
+                    return (SolidColorBrush)new BrushConverter().ConvertFromString("LightGreen");
+                else
+                    return (SolidColorBrush)new BrushConverter().ConvertFromString("White");
+            }
+        }
     }
 }
