@@ -252,7 +252,12 @@ namespace Akhmetova_Glazki
 
         private void PriorityChange_Click(object sender, RoutedEventArgs e)
         {
-            PriorityWindow window = new PriorityWindow();
+            int max = 0;
+            foreach (Agent AgentLV in AgentListView.SelectedItems)
+            {
+                if (AgentLV.Priority >= max) max = AgentLV.Priority;
+            }
+            PriorityWindow window = new PriorityWindow(max);
             window.ShowDialog();
             if (string.IsNullOrEmpty(window.TBPriority.Text))
                 return;
@@ -268,6 +273,7 @@ namespace Akhmetova_Glazki
             {
                 MessageBox.Show(ex.Message.ToString());
             }
+            UpdateAgent();
         }
     }
 }

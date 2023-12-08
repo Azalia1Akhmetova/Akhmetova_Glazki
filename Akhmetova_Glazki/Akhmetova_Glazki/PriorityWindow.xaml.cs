@@ -19,9 +19,10 @@ namespace Akhmetova_Glazki
     /// </summary>
     public partial class PriorityWindow : Window
     {
-        public PriorityWindow()
+        public PriorityWindow(int max)
         {
             InitializeComponent();
+            TBPriority.Text = max.ToString();
         }
 
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
@@ -37,5 +38,7 @@ namespace Akhmetova_Glazki
             TBPriority.Text = "";
             Close();
         }
+
+
     }
 }

@@ -100,8 +100,8 @@
                             <Button Name="EditBtn" Content="Редактировать" Margin="2" Click="EditBtn_Click"></Button>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Grid.Column="2" Grid.Row="2">
-                            <TextBlock Text="{Binding SalePercent}" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Right" FontSize="20"></TextBlock>
-                            <TextBlock Text="%" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Right" FontSize="20"></TextBlock>
+                            <TextBlock Text="{Binding SalePercent}" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Right" FontSize="30"></TextBlock>
+                            <TextBlock Text="%" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Right" FontSize="30"></TextBlock>
                         </StackPanel>
                         
                     </Grid>

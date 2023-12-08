@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\
+D:\3 курс\ИСП-3121\Ахметова\glazki\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\obj\Debug\
 Akhmetova_Glazki
 none
 false
 DEBUG;TRACE
-E:\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\App.xaml
-41424215897
-2832940637
-261807503636
-19706029178
-AddEditPage.xaml;AgentPage.xaml;MainWindow.xaml;PriorityWindow.xaml;
+D:\3 курс\ИСП-3121\Ахметова\glazki\Akhmetova_Glazki\Akhmetova_Glazki\Akhmetova_Glazki\App.xaml
+6-2021243194
+2-456458258
+28212172967
+19376455868
+AddEditPage.xaml;AddRecordPage.xaml;AgentPage.xaml;MainWindow.xaml;PriorityWindow.xaml;ProductSalesHistory.xaml;
 
-False
+True
 

@@ -134,5 +134,10 @@ namespace Akhmetova_Glazki
                 }
             }
         }
+
+        private void SaleBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new ProductSalesHistory(currentAgent));
+        }
     }
 }

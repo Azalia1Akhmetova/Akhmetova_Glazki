@@ -65,6 +65,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddRecordPage.xaml.cs">
+      <DependentUpon>AddRecordPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Agent.cs">
       <DependentUpon>AkhmetovaModel.tt</DependentUpon>
     </Compile>
@@ -103,6 +106,9 @@
     <Compile Include="ProductSale.cs">
       <DependentUpon>AkhmetovaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ProductSalesHistory.xaml.cs">
+      <DependentUpon>ProductSalesHistory.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ProductType.cs">
       <DependentUpon>AkhmetovaModel.tt</DependentUpon>
     </Compile>
@@ -113,6 +119,10 @@
       <DependentUpon>AkhmetovaModel.tt</DependentUpon>
     </Compile>
     <Page Include="AddEditPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddRecordPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -149,6 +159,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="PriorityWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProductSalesHistory.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
